@@ -4,19 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Bugor
-  - Lyzha
-  - Smert
-  - Tramplin
-  - YamaGryaz
+  - Puddle
+  - Undefined
+  - Stump
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - MedvedCar
   - Water
   - UI
-  - 
+  - Obstacle
   - 
   - 
   - 
