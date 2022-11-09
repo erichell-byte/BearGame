@@ -5,8 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Puddle
-  - Undefined
   - Stump
+  - Dirt
+  - SmallHill
+  - Trampoline
   layers:
   - Default
   - TransparentFX

@@ -15,4 +15,5 @@ public class Obstacle : MonoBehaviour
             return _obstacleObj;
         }
     }
+    
 }

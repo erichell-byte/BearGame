@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class TrampolineInteraction : MonoBehaviour ,IObstacleInteraction
+public class TrampolineInteraction : ObstacleInteraction
 {
-    public void Interaction()
+    [SerializeField]
+    private ObstacleObject _obstacleObj;
+    public override void Interaction(TransformMovement transformMovement)
     {
-        throw new System.NotImplementedException();
+        transformMovement.ChangeForce(_obstacleObj.DirectionOfAction);
     }
 }

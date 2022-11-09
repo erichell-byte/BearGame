@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DirtInteraction : MonoBehaviour, IObstacleInteraction
+public class DirtInteraction : ObstacleInteraction
 {
-    public void Interaction()
+    [SerializeField]
+    private ObstacleObject _obstacleObj;
+    public override void Interaction(TransformMovement transformMovement)
     {
-        
+        transformMovement.ChangeForce(_obstacleObj.DirectionOfAction);
     }
 }

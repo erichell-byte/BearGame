@@ -15,5 +15,5 @@ MonoBehaviour:
   _obstacleSize: {x: 0, y: 0}
   _obstacleImage: {fileID: 0}
   _type: 3
-  _directionOfAction: {x: 0, y: 0}
+  _directionOfAction: {x: 0, y: 0, z: -10}
   _isKilling: 0

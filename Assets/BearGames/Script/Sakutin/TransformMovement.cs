@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Vector3 = UnityEngine.Vector3;
 
 public class TransformMovement : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class TransformMovement : MonoBehaviour
     [SerializeField] private Vector3 _force;
     [SerializeField] private int _onSideMoveForce;
     private bool _boosted;
+    private bool stoped;
     
     public Transform selfTransform;
     
@@ -21,11 +24,14 @@ public class TransformMovement : MonoBehaviour
     
     public void Update()
     {
-        selfTransform.position += _force * Time.deltaTime;
-        if (_boosted)
+        if (!stoped)
+            selfTransform.position += _force * Time.deltaTime;
+        if (_boosted && !stoped)
             _force = Vector3.Lerp(_force, _maxForce, Time.deltaTime);
         else
             _force = Vector3.Lerp(_force, _minForce, Time.deltaTime);
+        if (stoped)
+            _force = Vector3.Lerp(_force, Vector3.zero, Time.deltaTime * 10);
     }
 
     public void UnderBoost()
@@ -35,6 +41,16 @@ public class TransformMovement : MonoBehaviour
     public void AfterBoost()
     {
         _boosted = false;
+    }
+
+    public void ChangeForce(Vector3 newForce)
+    {
+        _force += newForce;
+    }
+
+    public void StopCar()
+    {
+        stoped = true;
     }
     
     

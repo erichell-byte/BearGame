@@ -2,22 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PuddleInteraction : MonoBehaviour, IObstacleInteraction
+public class PuddleInteraction : ObstacleInteraction
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private ObstacleObject _obstacleObj;
+    public override void Interaction(TransformMovement transformMovement)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void Interaction()
-    {
-        throw new System.NotImplementedException();
+        transformMovement.ChangeForce(_obstacleObj.DirectionOfAction);
     }
 }

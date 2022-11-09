@@ -2,22 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StumpInteraction : MonoBehaviour, IObstacleInteraction
+public class StumpInteraction : ObstacleInteraction
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private ObstacleObject _obstacleObj;
 
-    // Update is called once per frame
-    void Update()
+    public override void Interaction(TransformMovement transformMovement)
     {
-        
-    }
-
-    public void Interaction()
-    {
-        throw new System.NotImplementedException();
+        transformMovement.StopCar();
     }
 }

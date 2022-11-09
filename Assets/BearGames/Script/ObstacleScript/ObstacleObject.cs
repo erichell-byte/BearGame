@@ -12,7 +12,7 @@ public class ObstacleObject : ScriptableObject
     [SerializeField]
     private ObstacleType _type;
     [SerializeField]
-    private Vector2 _directionOfAction;
+    private Vector3 _directionOfAction;
     [SerializeField]
     private bool _isKilling;
 
@@ -40,7 +40,7 @@ public class ObstacleObject : ScriptableObject
         }
     }
 
-    public Vector2 DirectionOfAction
+    public Vector3 DirectionOfAction
     {
         get
         {
