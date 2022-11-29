@@ -16,6 +16,16 @@ public class ObstacleObject : ScriptableObject
     [SerializeField]
     private bool _isKilling;
 
+    [SerializeField] private float _force;
+
+
+    public float Force
+    {
+        get
+        {
+            return _force;
+        }
+    }
     public Vector2 ObstacleSize
     {
         get

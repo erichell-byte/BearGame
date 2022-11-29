@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class TrampolineInteraction : ObstacleInteraction
+public class TrampolineInteraction : ObstacleInteractionCar
 {
     [SerializeField]
     private ObstacleObject _obstacleObj;
-    public override void Interaction(TransformMovement transformMovement)
+    public override void InteractionWithCar(CarThrow carThrow)
     {
-        transformMovement.ChangeForce(_obstacleObj.DirectionOfAction);
+        carThrow.ImpactOnCar(_obstacleObj.DirectionOfAction, _obstacleObj.Force);
     }
 }

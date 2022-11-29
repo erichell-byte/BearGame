@@ -5,38 +5,22 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
-    private float _horizontalInput;
-    private float _verticalInput;  
-    private Vector3 _direction;
-    private Rigidbody _rb;
-    [SerializeField]
-    private float _force; 
+    [SerializeField] private int _onSideMoveForce;
+    [SerializeField] private float upBorder = -22.5f;
+    [SerializeField] private float downBorder = 24f;
     
-    [SerializeField]
-    private float _maxForce;
-    
-    
-    void Start()
+    public void Move(Vector3 direction)
     {
-        _rb = GetComponent<Rigidbody>();
+        transform.position += direction * (_onSideMoveForce * Time.deltaTime);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        _horizontalInput = Input.GetAxis("Horizontal");
-        _verticalInput = Input.GetAxis("Vertical");
-        _direction = new Vector3(-_verticalInput,0, _horizontalInput);
-        Debug.Log(_rb.velocity);
-        if (_rb.velocity.z <= _maxForce)
-            _rb.AddForce(_direction * _force * Time.deltaTime, ForceMode.VelocityChange);
-        
-            
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
+        var transformPosition = transform.position;
+        if (transformPosition.x > downBorder)
+            transformPosition.x = downBorder;
+        else if (transformPosition.x < upBorder)
+            transformPosition.x = upBorder;
+        transform.position = transformPosition;
     }
 }

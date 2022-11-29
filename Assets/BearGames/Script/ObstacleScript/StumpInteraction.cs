@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StumpInteraction : ObstacleInteraction
+public class StumpInteraction : ObstacleInteractionRoad
 {
     [SerializeField]
     private ObstacleObject _obstacleObj;
 
-    public override void Interaction(TransformMovement transformMovement)
+    public override void InteractionWithRoad(RoadMovement roadMovement)
     {
-        transformMovement.StopCar();
+        roadMovement.StopCar();
     }
 }

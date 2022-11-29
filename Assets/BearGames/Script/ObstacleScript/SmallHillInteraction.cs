@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SmallHillInteraction : ObstacleInteraction
+public class SmallHillInteraction : ObstacleInteractionCar
 {
     [SerializeField]
     private ObstacleObject _obstacleObj;
-    public override void Interaction(TransformMovement transformMovement)
+    public override void InteractionWithCar(CarThrow transformMovement)
     {
-        transformMovement.ChangeForce(_obstacleObj.DirectionOfAction);
+        transformMovement.ImpactOnCar(_obstacleObj.DirectionOfAction, _obstacleObj.Force);
     }
 }
