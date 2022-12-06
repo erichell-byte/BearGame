@@ -5,7 +5,7 @@ using UnityEngine;
 public class BoostAnimator : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
-
+    /*
     public void PlayAnimation()
     {
         if (Input.GetMouseButtonDown(0))
@@ -18,7 +18,7 @@ public class BoostAnimator : MonoBehaviour
             _animator.SetBool("isBoosted", false);
         }
     }
-
+    */
     //public void PointerDown()
     //{
     //    isTouched = true;

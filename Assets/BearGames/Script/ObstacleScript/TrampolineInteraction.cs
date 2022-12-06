@@ -7,6 +7,7 @@ public class TrampolineInteraction : ObstacleInteractionCar
 {
     [SerializeField]
     private ObstacleObject _obstacleObj;
+
     public override void InteractionWithCar(CarThrow carThrow)
     {
         carThrow.ImpactOnCar(_obstacleObj.DirectionOfAction, _obstacleObj.Force);

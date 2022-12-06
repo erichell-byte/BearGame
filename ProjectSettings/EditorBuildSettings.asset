@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Clirgo/Pixel Kit - Car Free/Demo/Demo.unity
     guid: 515e1ddcd90a81d469860f81aea53271
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 0b8f4a50187714ee69326b9c9b2c9835
+  - enabled: 1
+    path: Assets/Scenes/(Vitaliy's)RaceBear.unity
+    guid: 06dd8612a0e7fe045b6f197fcb146288
   m_configObjects: {}

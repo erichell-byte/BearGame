@@ -11,6 +11,9 @@ public class RoadMovement : MonoBehaviour
     [SerializeField] private Vector3 _minSpeed;
     [SerializeField] private Vector3 _maxSpeed;
     [SerializeField] public Vector3 _speed;
+
+    [SerializeField] private Game _game;
+    [SerializeField] private Animator _animator;
     
     
     private bool _boosted;
@@ -33,10 +36,12 @@ public class RoadMovement : MonoBehaviour
     public void UnderBoost()
     {
         _boosted = true;
+        _animator.SetBool("isBoosted", true);
     }
     public void AfterBoost()
     {
         _boosted = false;
+        _animator.SetBool("isBoosted", false);
     }
 
     public void ChangeForce(Vector3 newForce)
@@ -47,8 +52,6 @@ public class RoadMovement : MonoBehaviour
     public void StopCar()
     {
         stoped = true;
+        _game.OnPlayerDied();
     }
-    
-    
-    
 }

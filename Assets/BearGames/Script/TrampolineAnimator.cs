@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TrampolineAnimator : MonoBehaviour
 {
+    /*
     [SerializeField] private Animator _animator;
     [SerializeField] private Transform _bear;
 
@@ -26,4 +27,5 @@ public class TrampolineAnimator : MonoBehaviour
             _animator.Play("Riding");
         }
     }
+    */
 }

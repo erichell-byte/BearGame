@@ -9,6 +9,7 @@ TagManager:
   - Dirt
   - SmallHill
   - Trampoline
+  - Ground
   layers:
   - Default
   - TransparentFX

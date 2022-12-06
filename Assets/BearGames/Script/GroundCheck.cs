@@ -9,15 +9,19 @@ public class GroundCheck : MonoBehaviour
     public bool isGrounded;
     public LayerMask layerMask;
 
+    [SerializeField] Animator _animator;
+
     public void Update()
     {
         if (Physics.Raycast(transform.position, Vector3.down, distanceToCheck,layerMask ))
         {
             isGrounded = true;
+            _animator.SetBool("isTrampoline", false);
         }
         else
         {
             isGrounded = false;
+            _animator.SetBool("isTrampoline", true);
         }
     }
 }

@@ -7,8 +7,8 @@ public class Game : MonoBehaviour
 {
     // [SerializeField] private TransformMovement _transformMovement;
     [SerializeField] private KeyBoardInput _keyBoardInput;
-    [SerializeField] private GameObject _startScreen;
-    [SerializeField] private GameObject _settingsScreen;
+    // [SerializeField] private GameObject _startScreen;
+    // [SerializeField] private GameObject _settingsScreen;
     [SerializeField] private GameObject _lossScreen;
 
     public bool IsGameActive { get; private set; }
@@ -25,7 +25,7 @@ public class Game : MonoBehaviour
     public void StarGame()
     {
         IsGameActive = true;
-        _startScreen.SetActive(false);
+        //_startScreen.SetActive(false);
         // _transformMovement.enabled = true;
         _keyBoardInput.enabled = true;
     }

@@ -111,3 +111,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _obstacleObj: {fileID: 11400000, guid: dd08191ebc9c8486c8f01377352de73c, type: 2}
+  _game: {fileID: 0}
