@@ -17,7 +17,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     private Vector3 GenerateRandomPosition()
     {
-        return  new Vector3(Random.Range(upBorder, downBorder), 1, 110);
+        return  new Vector3(Random.Range(upBorder, downBorder), 2.5f, 110);
     }
     
     private void SpawnObstacle()
